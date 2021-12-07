@@ -1,0 +1,7 @@
+.card {
+  @apply w-max m-4 rounded-lg border-2 border-solid shadow-xl;
+}
+
+.card.earthNation {
+  @apply border-earthNation-dark;
+}
