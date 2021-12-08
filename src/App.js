@@ -1,6 +1,7 @@
-import Card from "./components/card";
+import React from "react";
+import Board from "./components/board";
 
 function App() {
-  return <Card />;
+  return <Board />;
 }
 export default App;

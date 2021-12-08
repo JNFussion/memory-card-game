@@ -1,7 +1,16 @@
 .card {
-  @apply w-max m-4 rounded-lg border-2 border-solid shadow-xl;
+  @apply m-4 rounded-lg border-2 border-solid border-black shadow-xl bg-white;
 }
 
-.card.earthNation {
-  @apply border-earthNation-dark;
+.backs-card {
+  @apply h-230 grid grid-cols-2 grid-rows-3 gap-1 items-center justify-items-center m-4 bg-fire-dark border border-solid border-black;
+}
+
+.back-element {
+  @apply w-14;
+}
+
+.back-element.water,
+.back-element.air {
+  @apply col-span-2;
 }

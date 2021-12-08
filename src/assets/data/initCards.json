@@ -1,18 +1,18 @@
 [
   {
     "gifID": "yFWUUCVeZ0ttS",
-    "nation": "earth"
+    "element": "earth"
   },
   {
     "gifID": "kUTevwxXSaqzK",
-    "nation": "air"
+    "element": "air"
   },
   {
     "gifID": "F4w8zTcuwntv2",
-    "nation": "water"
+    "element": "water"
   },
   {
     "gifID": "d0O4zETPaQC08",
-    "nation": "fire"
+    "element": "fire"
   }
 ]
