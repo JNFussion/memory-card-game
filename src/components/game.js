@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import Board from "./board";
 import ScoreBoard from "./scoreBoard";
 
-const Game = function Game(props) {
+const Game = function Game() {
   const [score, setScore] = useState(0);
-  const [bestScore, setBestScore] = useState(0);
 
   return (
     <section>

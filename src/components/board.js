@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-param-reassign */
-import React, { useEffect, useReducer, useRef, useState } from "react";
+import React, { useEffect, useReducer } from "react";
 import uniqid from "uniqid";
 import PropTypes from "prop-types";
 import Card from "./card";
