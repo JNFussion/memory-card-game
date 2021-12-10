@@ -26,7 +26,7 @@ const ScoreBoard = function ScoreBoard({ score }) {
 };
 
 ScoreBoard.propTypes = {
-  score: PropTypes.func.isRequired,
+  score: PropTypes.number.isRequired,
 };
 
 export default ScoreBoard;
