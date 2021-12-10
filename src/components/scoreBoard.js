@@ -9,6 +9,7 @@ const ScoreBoard = function ScoreBoard({ score }) {
     if (score > bestScore) {
       setBestScore(score);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [score]);
 
   return (

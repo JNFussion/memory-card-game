@@ -6,7 +6,7 @@ This project is from [The odin project's JavaScript course.](https://www.theodin
 
 The app consist in 12 differents cards each with a caracter from the TV Show Avatar: The Last Airbander. You have to click in them without repetation until you have clicked all of them.
 
-If you wanna see it, click here.
+If you wanna see it, click [here](https://jnfussion.github.io/memory-card-game/).
 
 ## Resources
 
