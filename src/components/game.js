@@ -1,16 +1,15 @@
 import React, { useState } from "react";
 import Board from "./board";
+import ScoreBoard from "./scoreBoard";
 
 const Game = function Game(props) {
   const [score, setScore] = useState(0);
-  const [life, setLife] = useState(3);
+  const [bestScore, setBestScore] = useState(0);
 
   return (
     <section>
-      <Board setScore={setScore} setLife={setLife} />
-
-      <div>Score: {score}</div>
-      <div>Life: {life}</div>
+      <ScoreBoard score={score} />
+      <Board setScore={setScore} />
     </section>
   );
 };

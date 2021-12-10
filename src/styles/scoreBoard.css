@@ -1,0 +1,14 @@
+.scoreBoard {
+  @apply grid py-4 px-12 mb-2 shadow-md text-white bg-fire-dark;
+}
+.score-container {
+  @apply flex gap-3 items-center;
+}
+
+.label {
+  @apply font-sans font-bold text-xl;
+}
+
+.score {
+  @apply text-2xl;
+}
