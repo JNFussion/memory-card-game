@@ -1,14 +1,34 @@
 import { GiphyFetch } from "@giphy/js-fetch-api";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useAsync } from "react-async-hook";
 import PropTypes from "prop-types";
+import uniqid from "uniqid";
 import "../styles/card.css";
 import air from "../assets/images/air.png";
 import earth from "../assets/images/earth.png";
 import fire from "../assets/images/fire.png";
 import water from "../assets/images/water.png";
 
-const Card = function Card({ id, gifID, element, playing }) {
+function getFace(gif, isFacing, element, back) {
+  if (isFacing) {
+    return (
+      <div className="img-container m-4">
+        {gif && <img src={gif} alt={`Card of ${element} element`} />}
+      </div>
+    );
+  }
+  return (
+    <div className="backs-card">
+      {back.map((i) => (
+        <div key={uniqid()} className={`back-element ${i.name}`}>
+          <img src={i.url} alt={`backs cards ${i.name} element`} />
+        </div>
+      ))}
+    </div>
+  );
+}
+
+const Card = function Card({ id, gifID, element, isFacing }) {
   const [ID, setID] = useState(id);
   const [gif, setGif] = useState(null);
   useAsync(async () => {
@@ -36,28 +56,10 @@ const Card = function Card({ id, gifID, element, playing }) {
     },
   ]);
 
-  function getFace() {
-    if (playing) {
-      return (
-        <div className="img-container m-4">
-          {gif && <img src={gif} alt={`Card of ${element} element`} />}
-        </div>
-      );
-    }
-    return (
-      <div className="backs-card">
-        {back.map((i) => (
-          <div className={`back-element ${i.name}`}>
-            <img src={i.url} alt={`backs cards ${i.name} element`} />
-          </div>
-        ))}
-      </div>
-    );
-  }
-
   return (
+    // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
     <article id={ID} className={`card ${element}`}>
-      {getFace()}
+      {getFace(gif, isFacing, element, back)}
     </article>
   );
 };
@@ -66,7 +68,7 @@ Card.propTypes = {
   id: PropTypes.string.isRequired,
   gifID: PropTypes.string.isRequired,
   element: PropTypes.string.isRequired,
-  playing: PropTypes.bool.isRequired,
+  isFacing: PropTypes.bool.isRequired,
 };
 
 export default Card;
