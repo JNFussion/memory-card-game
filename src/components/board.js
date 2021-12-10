@@ -12,6 +12,10 @@ import Zuko from "../assets/images/Zuko.webp";
 import Iroh from "../assets/images/Iroh_smiling.webp";
 import Azula from "../assets/images/Azula.webp";
 import Appa from "../assets/images/Appa_flying.webp";
+import TyLee from "../assets/images/Ty_Lee.webp";
+import Suki from "../assets/images/Suki.webp";
+import Momo from "../assets/images/Momo_staring.webp";
+import Mai from "../assets/images/Mai.webp";
 
 function init() {
   const characters = [
@@ -23,6 +27,10 @@ function init() {
     { name: "Iroh", url: Iroh },
     { name: "Azula", url: Azula },
     { name: "Appa", url: Appa },
+    { name: "Ty Lee", url: TyLee },
+    { name: "Suki", url: Suki },
+    { name: "Momo", url: Momo },
+    { name: "Mai", url: Mai },
   ];
   const initialDeck = [];
 
@@ -104,7 +112,10 @@ const Board = function Board({ setScore }) {
   }, []);
 
   return (
-    <div id="board" className="max-w-5xl mx-auto  grid grid-cols-4">
+    <div
+      id="board"
+      className="max-w-5xl mx-auto  grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+    >
       {deck.map((card) => (
         <Card key={card.id} id={card.id} url={card.url} name={card.name} />
       ))}

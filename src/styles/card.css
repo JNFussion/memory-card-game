@@ -1,20 +1,7 @@
 .card {
-  @apply m-4 rounded-lg border-2 border-solid border-black shadow-xl bg-white;
+  @apply m-2 md:m-4 rounded-lg border-2 border-solid border-black shadow-xl bg-white;
 }
 
 .card > * {
   @apply pointer-events-none;
-}
-
-.backs-card {
-  @apply h-230 grid grid-cols-2 grid-rows-3 gap-1 items-center justify-items-center m-4 bg-fire-dark border border-solid border-black;
-}
-
-.back-element {
-  @apply w-14;
-}
-
-.back-element.water,
-.back-element.air {
-  @apply col-span-2;
 }

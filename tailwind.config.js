@@ -31,6 +31,9 @@ module.exports = {
       height: {
         230: "230px",
       },
+      gridTemplateColumns: {
+        auto: "repeat(4, minmax(144px, 1fr))",
+      },
     },
   },
   variants: {
